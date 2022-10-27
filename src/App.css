@@ -1,0 +1,29 @@
+.boarder{
+    border: 2px solid;
+    margin: 1em;
+    padding: 1em;
+}
+
+.screen-height{
+    height: 90vh;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.background{
+    background-image: url(..//public/Fox2.jpg), url(../public/background.jpg);
+    background-size: 35%, contain;
+    position: fixed, '';
+    background-position: left, left;
+    background-repeat: no-repeat, repeat;
+    background-position-x: 10%,0em;
+    background-position-y: 20em,0em;    
+}
+
+.fox{
+    object-fit: contain;
+    width: 100%;
+    height: 50%;
+}
