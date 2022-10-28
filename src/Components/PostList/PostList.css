@@ -1,0 +1,9 @@
+.arrow{
+    width: 50px;
+    height: auto;
+}
+
+.like-container{
+    display: flex;
+    justify-content: right;
+}

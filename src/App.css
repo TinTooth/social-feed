@@ -1,6 +1,15 @@
 @font-face {
     font-family: Blossoms;
-    src: url('../../fonts/BunchBlossomsPersonalUse-0nA4.ttf') format('truetype');
+    src: local("BunchBlossomsPersonalUse-0nA4"), url('./fonts/BunchBlossomsPersonalUse-0nA4.ttf') format('truetype');
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.blossom{
+    font-family: Blossoms;
 }
 
 .boarder{
@@ -34,7 +43,7 @@ li {
     width :95%;
 }
 .logo{
-    max-width: 35%;
+    max-width: 45%;
     height: auto;
 }
 

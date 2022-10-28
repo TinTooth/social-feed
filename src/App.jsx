@@ -16,10 +16,11 @@ function App() {
   }
 
   return (
-    <div className='container-fluid background full'>
+    <div>
       <NavBar />
-        <div className="row">
-      <div className='col-md-6'>
+    <div className='container-fluid background full pt-5'>
+        <div className="row justify-content-md-center">
+      <div className='col-md-5'>
           <div class = 'd-flex justify-content-center pb-4'>
           <img class = 'logo shadow-lg' src= {image} alt = "Fox HERE"></img>
           </div>
@@ -34,6 +35,7 @@ function App() {
           </div>
       </div>
         </div>
+    </div>
     </div>
   );
 }

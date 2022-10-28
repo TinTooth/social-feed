@@ -25,13 +25,13 @@ const CreatePost = ({AddPost}) => {
     }
 
     return (  
-        <form onSubmit={handleSubmit} className = 'form rounded shadow-lg'>
+        <form onSubmit={handleSubmit} className = 'form rounded shadow-lg mb-4'>
             <div className="mb-3">
-                <label class> Name </label>
+                <label class = 'h5'> Name </label>
                 <input type = 'string' class = 'form-control' value = {name} onChange = {(e) => setName(e.target.value)} onClick = {handleNClick}/>
             </div>
             <div className="mb-3">
-                <label class>Post</label>
+                <label class = 'h5'>Post</label>
                 <textarea type = 'string' class = 'form-control' value = {post} onChange = {(e) => setPost(e.target.value)} onClick = {handlPClick}/>
             </div>
             <div class = 'd-flex justify-content-end'>
