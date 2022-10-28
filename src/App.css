@@ -1,29 +1,71 @@
+@font-face {
+    font-family: Blossoms;
+    src: url('../../fonts/BunchBlossomsPersonalUse-0nA4.ttf') format('truetype');
+}
+
 .boarder{
-    border: 2px solid;
+    border: 3.5px solid;
+    border-color: aliceblue;
     margin: 1em;
     padding: 1em;
 }
 
+.wt{
+    color: aliceblue;
+}
+
 .screen-height{
-    height: 90vh;
+    height: 80vh;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+   
+    }
+
+.full{
+    height: 100vh;
+}
+
+li {
+    list-style: none;
+    width :95%;
+}
+.logo{
+    max-width: 35%;
+    height: auto;
 }
 
 .align-center{
     align-items: center;
 }
 
-.background{
-    background-image: url(..//public/Fox2.jpg), url(../public/background.jpg);
-    background-size: 35%, contain;
-    position: fixed, '';
-    background-position: left, left;
-    background-repeat: no-repeat, repeat;
-    background-position-x: 10%,0em;
-    background-position-y: 20em,0em;    
+.bg{
+    background-color: #8cbcd0;
 }
 
-.fox{
-    object-fit: contain;
-    width: 100%;
-    height: 50%;
+.bb{
+
+    background-color: rgb(30, 81, 107);
 }
+
+.background{
+    
+    background-color: rgb(30, 81, 107);
+    background-size: 25%;
+    position: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: 10%;
+    background-position-y: 20em;    
+}
+
+
+.form-control{
+    border: 3.5px solid;
+    border-color: aliceblue;
+    background-color: #8cbcd0;
+}
+

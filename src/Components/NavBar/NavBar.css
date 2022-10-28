@@ -1,7 +1,7 @@
 .nav-bar{
-    background-image: url(../../public/BlueBackground.jpg);
-    width: 100%;
-   padding-left: 2.5em;
-   padding-top: .5em;
-   padding-bottom: .25em;
+    background-color: #8cbcd0;
+   padding-left: 5em;
+   padding-top: 1em;
+   padding-bottom: 1em;
+   
 }

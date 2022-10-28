@@ -6,8 +6,8 @@ const PostList = ({posts}) => {
         <ul>
             {posts.map((post,i)=> {
                 return (
-                    <li key = {i}>
-                        <p>{post.name}</p>
+                    <li class = 'bg-light border-bottom shadow' key = {i}>
+                        <p class>{post.name}</p>
                         <p>{post.post}</p>
                         {/* Button image */}
                         {/* Button image */}

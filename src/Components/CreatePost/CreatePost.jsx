@@ -1,26 +1,42 @@
 import React, {useState} from 'react';
+import './CreatePost.css'
+
 
 const CreatePost = ({AddPost}) => {
-    const [name,setName] = useState('');
-    const [post,setPost] = useState('');
+    const [name,setName] = useState('Enter Your Name');
+    const [post,setPost] = useState('Write Your Post');
+    const [nameclick, setNClick] = useState(true);
+    const [postclick, setPClick] = useState(true);
     
-    function handleSubmit(event){
-        event.preventDefault();
+    function handleSubmit(e){
+        e.preventDefault();
         let newPost = {name:name,post:post};
-        AddPost(newPost)
+        AddPost(newPost);
+    }
+
+    function handleNClick(){
+        if (nameclick == true){ setName('')
+        setNClick(false)}
+    }
+    
+    function handlPClick() {
+        if (postclick == true){ setPost('')
+        setPClick(false)}
     }
 
     return (  
-        <form onSubmit={handleSubmit} className = 'form-grid'>
+        <form onSubmit={handleSubmit} className = 'form rounded shadow-lg'>
             <div className="mb-3">
-                <label class = 'col-sm-1'> Name </label>
-                <input type = 'string' value = {name} onChange = {(event) => setName(event.target.value)}/>
+                <label class> Name </label>
+                <input type = 'string' class = 'form-control' value = {name} onChange = {(e) => setName(e.target.value)} onClick = {handleNClick}/>
             </div>
             <div className="mb-3">
-                <label class = 'col-sm-1'>Post</label>
-                <textarea type = 'string' class = 'form-control' value = {post} onChange = {(event) => setPost(event.target.value)}/>
+                <label class>Post</label>
+                <textarea type = 'string' class = 'form-control' value = {post} onChange = {(e) => setPost(e.target.value)} onClick = {handlPClick}/>
             </div>
-            <button type = 'submit'>Create Post</button>
+            <div class = 'd-flex justify-content-end'>
+            <button type = 'submit' class = 'btns rounded' >Create Post</button>
+            </div>
         </form>
     );
 }
