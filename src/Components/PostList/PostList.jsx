@@ -22,6 +22,7 @@ const PostList = ({posts}) => {
             likeClicked = false;
         }
     }
+    
     function handleDislikeClick(e) {
         if(!dislikeClicked){
             e.target.src = arrowPD;
