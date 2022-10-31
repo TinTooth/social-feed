@@ -11,7 +11,7 @@ const CreatePost = ({AddPost}) => {
     function handleSubmit(e){
         e.preventDefault();
         let date = new Date();
-        let newPost = {name:name,post:post,time:date};
+        let newPost = {name:name,post:post,time:date,likeClicked:false,dislikeClicked:false};
         AddPost(newPost);
     }
 
