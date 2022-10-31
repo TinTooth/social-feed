@@ -20,7 +20,7 @@ const CreatePost = ({AddPost}) => {
         setNClick(false)}
     }
     
-    function handlPClick() {
+    function handlePClick() {
         if (postclick == true){ setPost('')
         setPClick(false)}
     }
@@ -29,11 +29,11 @@ const CreatePost = ({AddPost}) => {
         <form onSubmit={handleSubmit} className = 'bg p-3 rounded shadow-lg mb-4'>
             <div className="mb-3">
                 <label className = 'h5'> Name </label>
-                <input type = 'string' className = 'form-control' value = {name} onChange = {(e) => setName(e.target.value)} onClick = {handleNClick}/>
+                <input type = 'string' className = 'form-control' value = {name} onChange = {(e) => setName(e.target.value)} onClick = {handleNClick} onFocus = {handleNClick}/>
             </div>
             <div className="mb-3">
                 <label className = 'h5'>Post</label>
-                <textarea type = 'string' className = 'form-control height' value = {post} onChange = {(e) => setPost(e.target.value)} onClick = {handlPClick}/>
+                <textarea type = 'string' className = 'form-control height' value = {post} onChange = {(e) => setPost(e.target.value)} onClick = {handlePClick} onFocus = {handlePClick}/>
             </div>
             <div className = 'd-flex justify-content-end'>
             <button type = 'submit' className = 'btns rounded' >Create Post</button>
