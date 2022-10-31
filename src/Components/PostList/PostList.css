@@ -3,7 +3,9 @@
     height: auto;
 }
 
-.like-container{
+.time {
     display: flex;
-    justify-content: right;
+    align-self: center;
+    font-size: .90em;
+    color: grey;
 }

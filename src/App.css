@@ -32,10 +32,6 @@ ul {
     flex-wrap: wrap;
     flex-direction: column;
    
-    }
-
-.full{
-    height: 100vh;
 }
 
 li {
@@ -45,10 +41,6 @@ li {
 .logo{
     max-width: 45%;
     height: auto;
-}
-
-.align-center{
-    align-items: center;
 }
 
 .bg{
@@ -61,20 +53,8 @@ li {
 }
 
 .background{
-    
     background-color: rgb(30, 81, 107);
     background-size: 25%;
     position: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-position-x: 10%;
-    background-position-y: 20em;    
+    height: 100vh;
 }
-
-
-.form-control{
-    border: 3.5px solid;
-    border-color: aliceblue;
-    background-color: #8cbcd0;
-}
-

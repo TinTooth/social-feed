@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CreatePost from './Components/CreatePost/CreatePost';
 import NavBar from './Components/NavBar/NavBar';
 import PostList from './Components/PostList/PostList';
 import './App.css';
-import image from "./Fox.jpg";
+import image from "./Images/Fox.jpg";
 import "./fonts/BunchBlossomsPersonalUse-0nA4.ttf"
 
 
@@ -18,11 +18,11 @@ function App() {
   return (
     <div>
       <NavBar />
-    <div className='container-fluid background full pt-5'>
+    <div className='container-fluid background pt-5'>
         <div className="row justify-content-md-center">
       <div className='col-md-5'>
-          <div class = 'd-flex justify-content-center pb-4'>
-          <img class = 'logo shadow-lg' src= {image} alt = "Fox HERE"></img>
+          <div className = 'd-flex justify-content-center pb-4'>
+          <img className = 'logo shadow-lg' src= {image} alt = "Fox HERE"></img>
           </div>
           <div className="bb rounded shadow">
           <CreatePost AddPost={AddPost}/>

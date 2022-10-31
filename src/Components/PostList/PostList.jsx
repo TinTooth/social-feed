@@ -16,12 +16,10 @@ const PostList = ({posts}) => {
             e.target.nextElementSibling.src = arrowBD;
             likeClicked = true;
             dislikeClicked = false;
-            console.log('hello')
         }
         else{
             e.target.src = arrowBU;
             likeClicked = false;
-            console.log('goodbye')
         }
     }
     function handleDislikeClick(e) {
@@ -37,17 +35,24 @@ const PostList = ({posts}) => {
         }
     }
 
+    function dateString(post){
+        return 'Posted  on ' + (post.time.getMonth()+1) + '-' + 
+        post.time.getDate() +"-"+ post.time.getFullYear() +"  at  "
+        + post.time.getHours()+":"+ post.time.getMinutes()+":"+post.time.getSeconds();
+    }
+
 
     return (
-        <ul class = 'mt-3'>
+        <ul className = 'mt-3'>
             {posts.map((post,i)=> {
                 return (
-                    <li class = 'bg-light border-bottom shadow m-1' key = {i}>
-                        <div class = 'm-2'>{post.name}</div>
-                        <div class = 'm-4'>{post.post}</div>
-                        <div class = 'like-container'>
-                            <img key = {i+101} onClick = {(e) => handleLikeClick(e)} class = 'arrow' src = {arrowBU}></img>
-                            <img key = {i+201} onClick = {(e) => handleDislikeClick(e)} class = 'arrow' src = {arrowBD}></img>
+                    <li className = 'bg-light border-bottom shadow m-2' key = {i}>
+                        <div className = 'm-2 h5'>{post.name}</div>
+                        <div className = 'm-4'>{post.post}</div>
+                        <div className = 'd-flex justify-content-end'>
+                            <div className = 'time'> {dateString(post)}</div>
+                            <img key = {i+101} onClick = {(e) => handleLikeClick(e)} className = 'arrow' src = {arrowBU}></img>
+                            <img key = {i+201} onClick = {(e) => handleDislikeClick(e)} className = 'arrow' src = {arrowBD}></img>
                         </div>
 
                     </li>
