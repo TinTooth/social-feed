@@ -7,30 +7,32 @@ import './Post.css'
 
 
 const Post = ({post}) => {
-    const [refresh, setRefresh] = useState(0);
+    
+    const [likeClicked,setLikeClicked] = useState(false);
+    const [dislikeClicked,setDislikeClicked] = useState(false);
 
     function handleLikeClick() {
-        if (!post.likeClicked){
-            post.likeClicked = true;
-            post.dislikeClicked = false;
-            setRefresh(refresh+1);
+        if (!likeClicked){
+            setLikeClicked(true);
+            if( dislikeClicked){
+            (setDislikeClicked(false));
+            }
         }
         else{
-            post.likeClicked = false;
-            setRefresh(refresh+1);
+            setLikeClicked(false);  
         }
     }
 
     function handleDislikeClick() {
-        if(!post.dislikeClicked) {
-
-            post.dislikeClicked = true;
-            post.likeClicked = false;
-            setRefresh(refresh+1);
+        if(!dislikeClicked) {
+            setDislikeClicked(true);
+            if(likeClicked){
+                setLikeClicked(false);
+            }
         }
         else{
-            post.dislikeClicked = false;
-            setRefresh(refresh+1);
+           setDislikeClicked(false);
+           
         }
     }
 
@@ -41,7 +43,7 @@ const Post = ({post}) => {
     }
 
     function likeArrow(){
-        if (!post.likeClicked){
+        if (!likeClicked){
             return arrowBU
         }
         else{
@@ -49,7 +51,7 @@ const Post = ({post}) => {
         }
     }
     function dislikeArrow(){
-        if (!post.dislikeClicked){
+        if (!dislikeClicked){
             return arrowBD
         }
         else{
